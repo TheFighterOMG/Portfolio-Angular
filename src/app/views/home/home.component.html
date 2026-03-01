@@ -1,1 +1,75 @@
-<p>home works!</p>
+<section class="min-h-[85vh] flex items-center justify-center py-16 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-16 max-w-6xl">
+
+        <!-- foto con efectos de profundidad -->
+        <div class="w-64 h-64 md:w-96 md:h-96 relative flex-shrink-0 group">
+            <!-- fondos decorativos con animaciones suaves -->
+            <div
+                class="absolute inset-0 bg-blue-500 rounded-[2rem] rotate-6 opacity-10 group-hover:rotate-12 transition-transform duration-500">
+            </div>
+            <div
+                class="absolute inset-0 bg-gray-900 rounded-[2rem] -rotate-3 opacity-5 group-hover:-rotate-6 transition-transform duration-500">
+            </div>
+
+            <div
+                class="relative w-full h-full bg-white rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
+                <!-- Uso de foto real con estilo premium -->
+                <img src="assets/foto-perfil.png" [alt]="personalData.name"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+
+            <!-- badge de disponibilidad -->
+            <div
+                class="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Disponible para trabajar
+            </div>
+        </div>
+
+        <!-- contenido de texto -->
+        <div class="flex-1 text-center md:text-left animate-fade-in">
+            <h2 class="text-blue-600 font-bold tracking-[0.2em] uppercase text-sm mb-4">Ingeniería Web</h2>
+
+            <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                Soy <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">{{
+                    personalData.name }}</span>
+            </h1>
+
+            <p class="text-2xl md:text-3xl text-gray-700 font-medium mb-8">
+                {{ personalData.title }}
+            </p>
+
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed mb-10 max-w-2xl">
+                {{ personalData.description }}
+            </p>
+
+            <div class="flex flex-wrap gap-5 justify-center md:justify-start">
+                <a routerLink="/projects"
+                    class="px-10 py-4 bg-gray-900 text-white rounded-2xl font-bold shadow-xl hover:bg-gray-800 hover:-translate-y-1 active:scale-95 transition-all">
+                    Ver Proyectos
+                </a>
+                <a routerLink="/contact"
+                    class="px-10 py-4 border-2 border-gray-200 text-gray-900 rounded-2xl font-bold hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1 active:scale-95 transition-all bg-white">
+                    Contactar
+                </a>
+            </div>
+
+            <!-- valores y principios de desarrollo -->
+            <div
+                class="mt-12 pt-10 border-t border-gray-200/60 flex flex-wrap gap-x-12 gap-y-4 justify-center md:justify-start">
+                <div class="flex items-center gap-2 text-gray-700 font-semibold tracking-wide">
+                    <span class="text-blue-600 text-xl font-black">✓</span> Código Limpio
+                </div>
+                <div class="flex items-center gap-2 text-gray-700 font-semibold tracking-wide">
+                    <span class="text-blue-600 text-xl font-black">✓</span> Principios SOLID
+                </div>
+                <div class="flex items-center gap-2 text-gray-700 font-semibold tracking-wide">
+                    <span class="text-blue-600 text-xl font-black">✓</span> UX/UI Friendly
+                </div>
+                <div class="flex items-center gap-2 text-gray-700 font-semibold tracking-wide">
+                    <span class="text-blue-600 text-xl font-black">✓</span> Aprendizaje Constante
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

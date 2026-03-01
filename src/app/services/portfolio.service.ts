@@ -8,11 +8,11 @@ export class PortfolioService {
 
   private personalData = {
     name: "Daniel Gómez Ortiz",
-    title: "Desarrollador Web Full Stack / Junior",
+    title: "Desarrollador de Aplicaciones Web / Junior",
     description: "Soy un apasionado de la tecnología con gran capacidad de autoaprendizaje y adaptación tecnológica. Me encanta construir aplicaciones web que aportan valor, con código limpio y una gran experiencia de usuario.",
     email: "dnlgmzrtz@gmail.com",
     github: "https://github.com/DanielG-git",
-    linkedin: "https://linkedin.com/in/tu-perfil"
+    linkedin: "https://www.linkedin.com/in/daniel-gómez-ortiz/"
   };
 
   constructor() { }

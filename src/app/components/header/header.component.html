@@ -1,21 +1,19 @@
 <header class="bg-gray-900 text-white shadow-md">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a routerLink="/" class="text-2xl font-bold tracking-tight text-blue-400 hover:text-white transition-colors">
-      MiPortfolio
+    <a routerLink="/" class="flex items-center hover:opacity-80 transition-opacity">
+      <img src="assets/logo-portfolio.png" alt="Logo" class="h-10 w-auto">
     </a>
-    
-    <!-- Navegación Desktop -->
+
+    <!-- navegación para PC -->
     <nav class="hidden md:flex space-x-6">
-      <a routerLink="/" routerLinkActive="text-blue-400"
-         [routerLinkActiveOptions]="{exact: true}"
-         class="hover:text-blue-300 font-medium transition-colors">Sobre Mí</a>
+      <a routerLink="/" routerLinkActive="text-blue-400" [routerLinkActiveOptions]="{exact: true}"
+        class="hover:text-blue-300 font-medium transition-colors">Sobre Mí</a>
       <a routerLink="/skills" routerLinkActive="text-blue-400"
-         class="hover:text-blue-300 font-medium transition-colors">Habilidades</a>
+        class="hover:text-blue-300 font-medium transition-colors">Habilidades</a>
       <a routerLink="/projects" routerLinkActive="text-blue-400"
-         class="hover:text-blue-300 font-medium transition-colors">Proyectos</a>
+        class="hover:text-blue-300 font-medium transition-colors">Proyectos</a>
       <a routerLink="/contact" routerLinkActive="text-blue-400"
-         class="hover:text-blue-300 font-medium transition-colors">Contacto</a>
+        class="hover:text-blue-300 font-medium transition-colors">Contacto</a>
     </nav>
   </div>
 </header>

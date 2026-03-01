@@ -2,4 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Activo el scroll suave para toda mi página */
+html {
+    scroll-behavior: smooth;
+}
 
+/* Defino mi animación personalizada de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase para usar mi animación */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Aplico mi animación al contenido principal para las transiciones */
+main {
+    animation: fadeIn 0.5s ease-in-out;
+}
