@@ -21,8 +21,16 @@ export class PortfolioService {
     return this.personalData;
   }
 
+  private skills = [
+    { name: "Desarrollo Frontend (Angular, HTML, CSS)", level: 85, icon: "💻" },
+    { name: "Desarrollo Backend (Node.js, Java)", level: 75, icon: "⚙️" },
+    { name: "Bases de Datos (SQL, NoSQL)", level: 70, icon: "🗄️" },
+    { name: "Control de Versiones (Git)", level: 90, icon: "🔀" },
+    { name: "Metodologías Ágiles", level: 80, icon: "🔄" }
+  ];
+
   getSkills(): Observable<any[]> {
-    return of([]);
+    return of(this.skills);
   }
 
   getProjects(): Observable<any[]> {
