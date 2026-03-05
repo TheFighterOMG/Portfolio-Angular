@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PortfolioService } from '../../services/portfolio.service';
 
 @Component({
-    selector: 'app-skills',
-    templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.css'],
-    standalone: false
+  selector: 'app-skills',
+  imports: [CommonModule],
+  standalone: true,
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  private portfolioService = inject(PortfolioService);
   skills: any[] = [];
-
-  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
     this.portfolioService.getSkills().subscribe(data => {

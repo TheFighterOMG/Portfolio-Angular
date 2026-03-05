@@ -11,7 +11,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 animate-fade-in" style="animation-delay: 0.2s;">
 
             <!-- Recorro habilidades desde el componente -->
-            <div *ngFor="let skill of skills" class="group">
+            @for (skill of skills; track skill) {
+            <div class="group">
                 <div class="flex justify-between items-end mb-2">
                     <div class="flex items-center gap-3">
                         <span class="text-3xl filter drop-shadow-sm group-hover:scale-110 transition-transform">{{
@@ -20,7 +21,6 @@
                     </div>
                     <span class="text-blue-600 font-bold">{{ skill.level }}%</span>
                 </div>
-
                 <!-- barra de progreso -->
                 <div class="w-full bg-gray-100 rounded-full h-3 overflow-hidden shadow-inner cursor-default">
                     <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-3 rounded-full transition-all duration-1000 ease-out group-hover:brightness-110"
@@ -28,6 +28,7 @@
                     </div>
                 </div>
             </div>
+            }
 
         </div>
 
@@ -45,8 +46,7 @@
                 <span
                     class="px-5 py-2.5 bg-gray-50 text-gray-700 font-semibold rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 hover:shadow-md transition-all cursor-default">Postman</span>
                 <span
-                    class="px-5 py-2.5 bg-gray-50 text-gray-700 font-semibold rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 hover:shadow-md transition-all cursor-default">Scrum
-                    / Kanban</span>
+                    class="px-5 py-2.5 bg-gray-50 text-gray-700 font-semibold rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 hover:shadow-md transition-all cursor-default">Scrum</span>
             </div>
         </div>
     </div>

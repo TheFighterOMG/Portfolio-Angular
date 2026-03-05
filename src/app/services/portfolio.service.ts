@@ -22,11 +22,11 @@ export class PortfolioService {
   }
 
   private skills = [
-    { name: "Desarrollo Frontend (Angular, HTML, CSS)", level: 85, icon: "💻" },
-    { name: "Desarrollo Backend (Node.js, Java)", level: 75, icon: "⚙️" },
-    { name: "Bases de Datos (SQL, NoSQL)", level: 70, icon: "🗄️" },
-    { name: "Control de Versiones (Git)", level: 90, icon: "🔀" },
-    { name: "Metodologías Ágiles", level: 80, icon: "🔄" }
+    { name: "Desarrollo Frontend (Angular 20, Tailwind CSS)", level: 85, icon: "💻" },
+    { name: "Desarrollo Backend (Java, Spring Boot)", level: 80, icon: "☕" },
+    { name: "Bases de Datos Relacionales (MySQL, PostgreSQL)", level: 75, icon: "🗄️" },
+    { name: "Control de Versiones (Git, GitHub)", level: 90, icon: "🔀" },
+    { name: "Metodologías Ágiles (Scrum)", level: 80, icon: "🔄" }
   ];
 
   getSkills(): Observable<any[]> {
