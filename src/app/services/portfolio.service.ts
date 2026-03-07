@@ -33,7 +33,28 @@ export class PortfolioService {
     return of(this.skills);
   }
 
+  private projects = [
+    {
+      title: "DocuFlow - Gestión Documental",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      technologies: ["Angular 20", "Tailwind CSS"],
+      github: "https://github.com/DanielG-git"
+    },
+    {
+      title: "API Gestión Hospitalaria",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      technologies: ["Java", "Spring Boot", "MySQL"],
+      github: "https://github.com/DanielG-git"
+    },
+    {
+      title: "E-Commerce Backend",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      technologies: ["Java", "Spring Data JPA", "PostgreSQL"],
+      github: "https://github.com/DanielG-git"
+    }
+  ];
+
   getProjects(): Observable<any[]> {
-    return of([]);
+    return of(this.projects);
   }
 }

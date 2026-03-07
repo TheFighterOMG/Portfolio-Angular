@@ -1,1 +1,57 @@
-<p>projects works!</p>
+<section class="min-h-screen py-16 px-6 bg-gray-50">
+    <div class="container mx-auto max-w-6xl">
+        <!-- Título de la Sección -->
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-blue-600 font-bold tracking-[0.2em] uppercase text-sm mb-2">Portafolio</h2>
+            <h1 class="text-4xl md:text-5xl font-black text-gray-900">Proyectos Destacados</h1>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mt-6 rounded-full"></div>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Aquí te presento una selección de los trabajos en los que he
+                aplicado mis talentos tanto en Frontend moderno (Angular) como en Backend escalables (Java / Spring).
+            </p>
+        </div>
+
+        <!-- Grid de Proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fade-in"
+            style="animation-delay: 0.2s;">
+
+            <!-- Recorro iterando lista de proyectos -->
+            <!-- Recorro iterando lista de proyectos -->
+            @for (project of projects; track project.title) {
+            <div
+                class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-100 group">
+
+                <!-- Banner Superior de la Tarjeta (Fondo elegante en lugar de imagen para mantener la claridad) -->
+                <div
+                    class="h-48 w-full bg-gradient-to-br from-blue-500 to-indigo-600 group-hover:from-blue-600 group-hover:to-indigo-700 transition-colors flex items-center justify-center p-6 text-center">
+                    <h3 class="text-2xl font-black text-white drop-shadow-md">{{ project.title }}</h3>
+                </div>
+
+                <!-- Información y detalles del proyecto -->
+                <div class="p-8 flex flex-col flex-grow">
+                    <p class="text-gray-600 mb-6 flex-grow leading-relaxed">{{ project.description }}</p>
+
+                    <!-- Etiquetas con tecnologías usadas -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        @for (tech of project.technologies; track tech) {
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-md border border-blue-100">{{
+                            tech }}</span>
+                        }
+                    </div>
+
+                    <!-- Botón de acceso al Github -->
+                    <a [href]="project.github" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-xl transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                        Ver en GitHub
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
