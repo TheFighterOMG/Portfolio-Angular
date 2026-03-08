@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PortfolioService } from '../../services/portfolio.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  ngOnInit(): void { }
+  private portfolioService = inject(PortfolioService);
+  personalData: any;
+
+  ngOnInit(): void {
+    this.personalData = this.portfolioService.getPersonalData();
+  }
 }
