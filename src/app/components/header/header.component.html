@@ -1,4 +1,4 @@
-<header class="bg-gray-900 text-white shadow-md">
+<header class="bg-gray-900 text-white shadow-md relative z-50">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
     <a routerLink="/" class="flex items-center hover:opacity-80 transition-opacity">
       <img src="assets/logo-portfolio.png" alt="Logo" class="h-10 w-auto rounded-xl">
@@ -15,5 +15,37 @@
       <a routerLink="/contact" routerLinkActive="text-blue-400"
         class="hover:text-blue-300 font-medium transition-colors">Contacto</a>
     </nav>
+
+    <!-- Botón Menú Móvil -->
+    <button class="md:hidden focus:outline-none" (click)="toggleMobileMenu()" aria-label="Abrir menú">
+      <svg class="w-8 h-8 text-white hover:text-blue-400 transition-colors" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        @if (!isMobileMenuOpen) {
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        } @else {
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        }
+      </svg>
+    </button>
   </div>
+
+  <!-- Menú desplegable móvil -->
+  @if (isMobileMenuOpen) {
+  <div class="md:hidden bg-gray-900 border-t border-gray-800 animate-fade-in absolute w-full shadow-2xl">
+    <nav class="flex flex-col py-4 px-6 space-y-4">
+      <a routerLink="/" routerLinkActive="text-blue-400 bg-gray-800" [routerLinkActiveOptions]="{exact: true}"
+        class="block hover:bg-gray-800 hover:text-blue-300 font-medium px-4 py-3 rounded-xl transition-colors"
+        (click)="toggleMobileMenu()">Sobre Mí</a>
+      <a routerLink="/skills" routerLinkActive="text-blue-400 bg-gray-800"
+        class="block hover:bg-gray-800 hover:text-blue-300 font-medium px-4 py-3 rounded-xl transition-colors"
+        (click)="toggleMobileMenu()">Habilidades</a>
+      <a routerLink="/projects" routerLinkActive="text-blue-400 bg-gray-800"
+        class="block hover:bg-gray-800 hover:text-blue-300 font-medium px-4 py-3 rounded-xl transition-colors"
+        (click)="toggleMobileMenu()">Proyectos</a>
+      <a routerLink="/contact" routerLinkActive="text-blue-400 bg-gray-800"
+        class="block hover:bg-gray-800 hover:text-blue-300 font-medium px-4 py-3 rounded-xl transition-colors"
+        (click)="toggleMobileMenu()">Contacto</a>
+    </nav>
+  </div>
+  }
 </header>
