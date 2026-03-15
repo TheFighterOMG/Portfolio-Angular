@@ -1,27 +1,53 @@
-# PortfolioWeb
+# Portfolio Profesional Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+Bienvenido/a al repositorio de mi Portfolio Profesional, creado como proyecto final para demostrar habilidades como desarrollador de aplicaciones web. 
 
-## Development server
+Este proyecto simula un encargo real para construir una carta de presentación al mundo utilizando tecnologías modernas. Está configurado como una **Single Page Application (SPA)** escalable y responsiva.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologías Utilizadas
 
-## Code scaffolding
+*   **Framework Core:** Angular 20 (Arquitectura Standalone)
+*   **Estilos y Diseño:** Tailwind CSS (enfocado en Mobile-First y Responsive Design)
+*   **Enrutamiento:** Angular Router
+*   **Gestión de Datos:** `HttpClient` consumiendo un archivo estático `data.json`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ✨ Características Principales
 
-## Build
+*   **Arquitectura Moderna:** Uso nativo de *Standalone Components* (sin módulos heredados), el nuevo flujo de control (`@for`, `@if`), e inyección de dependencias funcional (`inject()`).
+*   **Sistema de Datos Desacoplado:** Siguiendo las mejores prácticas, la información de Habilidades y Proyectos no está "quemada" (hardcodeada) en el HTML. Se consume dinámicamente mediante un servicio (`PortfolioService`) simulando la respuesta de una API REST.
+*   **Diseño 100% Responsivo:** Interfaz adaptada a cualquier dispositivo, con menú hamburguesa para móviles y reestructuración de *grids* en escritorio.
+*   **Componentes Modulares:** Estructura limpia separando responsabilidades: `Home`, `Skills`, `Projects`, `Contact`, `Header` y `Footer`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Instalación y Ejecución Local
 
-## Running unit tests
+Para correr este proyecto en tu entorno local, sigue estos pasos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1.  **Clona el repositorio**
+    ```bash
+    git clone https://github.com/DanielG-git/Portfolio_Angular.git
+    cd Portfolio_Angular
+    ```
 
-## Running end-to-end tests
+2.  **Instala las dependencias**
+    Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
+    ```bash
+    npm install
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3.  **Ejecuta el servidor de desarrollo**
+    ```bash
+    ng serve
+    ```
+    *También puedes usar `npm start`.*
 
-## Further help
+4.  **Abre la aplicación**
+    Navega en tu navegador web favorito a: `http://localhost:4200/`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📦 Construcción para Producción
+
+Para compilar el proyecto y prepararlo para el despliegue:
+
+```bash
+ng build
+```
+Los archivos optimizados se generarán en la carpeta `dist/portfolio-web`. Estos son los archivos que se suben a servidores estáticos como Vercel, Netlify o GitHub Pages.
