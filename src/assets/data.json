@@ -28,33 +28,38 @@
     ],
     "projects": [
         {
-            "title": "DocuFlow - Gestión Documental",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "title": "DocuFlow",
+            "description": "Plataforma unificada inteligente para centralizar el ciclo de vida de documentos críticos (facturas, contratos). Creada para resolver la fragmentación en PYMEs, con integración OCR en proceso.",
             "technologies": [
                 "Angular 20",
-                "Tailwind CSS"
-            ],
-            "github": "https://github.com/DanielG-git"
-        },
-        {
-            "title": "API Gestión Hospitalaria",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "technologies": [
-                "Java",
+                "Ionic",
                 "Spring Boot",
-                "MySQL"
+                "PostgreSQL",
+                "Spring Security (JWT)",
+                "OCR"
             ],
-            "github": "https://github.com/DanielG-git"
+            "status": "in-progress"
         },
         {
-            "title": "E-Commerce Backend",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "title": "Melody",
+            "description": "Portal web colaborativo para descubrir y escuchar novedades musicales. Creado en equipo junto a otros desarrolladores, enfocado en ofrecer una experiencia de audio accesible y fluida en cualquier dispositivo.",
+            "image": "assets/melody-bg.png",
             "technologies": [
-                "Java",
-                "Spring Data JPA",
-                "PostgreSQL"
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Git"
             ],
-            "github": "https://github.com/DanielG-git"
+            "github": "https://github.com/AgustinBeniteez/melody"
+        },
+        {
+            "title": "Página Librería",
+            "description": "Desarrollo académico de una página web para una librería local. Proyecto enfocado en maquetación estructurada, diseño clásico y principios de experiencia de usuario para la navegación entre categorías de libros.",
+            "technologies": [
+                "HTML",
+                "CSS"
+            ],
+            "github": "https://github.com/DanielG-git/pagina_libreria"
         }
     ]
 }

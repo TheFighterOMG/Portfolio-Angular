@@ -14,16 +14,22 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fade-in"
             style="animation-delay: 0.2s;">
 
-            <!-- Recorro iterando lista de proyectos -->
-            <!-- Recorro iterando lista de proyectos -->
+            <!-- Lista de proyectos -->
             @for (project of projects; track project.title) {
             <div
                 class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-100 group">
 
-                <!-- Banner Superior de la Tarjeta (Fondo elegante en lugar de imagen para mantener la claridad) -->
-                <div
-                    class="h-48 w-full bg-gradient-to-br from-blue-500 to-indigo-600 group-hover:from-blue-600 group-hover:to-indigo-700 transition-colors flex items-center justify-center p-6 text-center">
-                    <h3 class="text-2xl font-black text-white drop-shadow-md">{{ project.title }}</h3>
+                <!-- Banner Superior de la Tarjeta (Imagen de fondo si la hay, sino gradiente elegante) -->
+                <div class="h-48 w-full relative group-hover:from-blue-600 group-hover:to-indigo-700 transition-colors flex items-center justify-center p-6 text-center"
+                    [ngClass]="project.image ? '' : 'bg-gradient-to-br from-blue-500 to-indigo-600'">
+                    
+                    @if (project.image) {
+                        <img [src]="project.image" alt="Imagen del proyecto" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500">
+                        <!-- Superposición oscura opcional para que lea mejor el título -->
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    }
+
+                    <h3 class="text-2xl font-black text-white relative z-10 drop-shadow-lg">{{ project.title }}</h3>
                 </div>
 
                 <!-- Información y detalles del proyecto -->
@@ -39,9 +45,10 @@
                         }
                     </div>
 
-                    <!-- Botón de acceso al Github -->
+                    <!-- Botón de Próximamente -->
+                    @if (project.github) {
                     <a [href]="project.github" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-xl transition-colors">
+                        class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-xl transition-all hover:-translate-y-1 active:scale-95">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             viewBox="0 0 16 16">
                             <path
@@ -49,6 +56,16 @@
                         </svg>
                         Ver en GitHub
                     </a>
+                    } @else if (project.status === 'in-progress') {
+                    <button type="button"
+                        class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 hover:border-blue-400 hover:shadow-md text-blue-700 font-bold rounded-xl transition-all transform hover:-translate-y-1 active:scale-95 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="group-hover:animate-pulse" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                        Próximamente
+                    </button>
+                    }
                 </div>
             </div>
             }
