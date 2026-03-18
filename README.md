@@ -1,5 +1,7 @@
 # Portfolio Profesional Angular
 
+**Enlace a la demo:** [https://thefighteromg.github.io/Portfolio-Angular/](https://thefighteromg.github.io/Portfolio-Angular/)
+
 Bienvenido/a al repositorio de mi Portfolio Profesional, creado como proyecto final para demostrar habilidades como desarrollador de aplicaciones web. 
 
 Este proyecto simula un encargo real para construir una carta de presentación al mundo utilizando tecnologías modernas. Está configurado como una **Single Page Application (SPA)** escalable y responsiva.
@@ -24,8 +26,8 @@ Para correr este proyecto en tu entorno local, sigue estos pasos:
 
 1.  **Clona el repositorio**
     ```bash
-    git clone https://github.com/DanielG-git/Portfolio_Angular.git
-    cd Portfolio_Angular
+    git clone https://github.com/TheFighterOMG/Portfolio-Angular.git
+    cd Portfolio-Angular
     ```
 
 2.  **Instala las dependencias**
