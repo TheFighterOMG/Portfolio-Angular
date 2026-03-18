@@ -1,0 +1,65 @@
+{
+    "skills": [
+        {
+            "name": "Desarrollo Frontend (Angular 20, Tailwind CSS)",
+            "level": 85,
+            "icon": "💻"
+        },
+        {
+            "name": "Desarrollo Backend (Java, Spring Boot)",
+            "level": 80,
+            "icon": "☕"
+        },
+        {
+            "name": "Bases de Datos Relacionales (MySQL, PostgreSQL)",
+            "level": 75,
+            "icon": "🗄️"
+        },
+        {
+            "name": "Control de Versiones (Git, GitHub)",
+            "level": 90,
+            "icon": "🔀"
+        },
+        {
+            "name": "Metodologías Ágiles (Scrum)",
+            "level": 80,
+            "icon": "🔄"
+        }
+    ],
+    "projects": [
+        {
+            "title": "DocuFlow",
+            "description": "Plataforma unificada inteligente para centralizar el ciclo de vida de documentos críticos (facturas, contratos). Creada para resolver la fragmentación en PYMEs, con integración OCR en proceso.",
+            "technologies": [
+                "Angular 20",
+                "Ionic",
+                "Spring Boot",
+                "PostgreSQL",
+                "Spring Security (JWT)",
+                "OCR"
+            ],
+            "status": "in-progress"
+        },
+        {
+            "title": "Melody",
+            "description": "Portal web colaborativo para descubrir y escuchar novedades musicales. Creado en equipo junto a otros desarrolladores, enfocado en ofrecer una experiencia de audio accesible y fluida en cualquier dispositivo.",
+            "image": "assets/melody-bg.png",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Git"
+            ],
+            "github": "https://github.com/AgustinBeniteez/melody"
+        },
+        {
+            "title": "Página Librería",
+            "description": "Desarrollo académico de una página web para una librería local. Proyecto enfocado en maquetación estructurada, diseño clásico y principios de experiencia de usuario para la navegación entre categorías de libros.",
+            "technologies": [
+                "HTML",
+                "CSS"
+            ],
+            "github": "https://github.com/DanielG-git/pagina_libreria"
+        }
+    ]
+}
